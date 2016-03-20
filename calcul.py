@@ -27,7 +27,7 @@ def Start(prenom):
     nb=0
 
     bonnereponse=['C\'est bien %s' % prenom,'Bravo %s' % prenom, 'Bien %s, continue' % prenom,'C\'est super']
-    mauvaisereponse=['C\'est pas correct %s' %s prenom, 'C\'est mauvais %s' % prenom]
+    mauvaisereponse=['C\'est pas correct %s' % prenom, 'C\'est mauvais %s' % prenom]
 
     equations=[]
 
