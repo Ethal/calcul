@@ -1,6 +1,6 @@
 # calcul
-calcul
 
+reviewing multiplication tables for child
 
 ## Install ##
 
