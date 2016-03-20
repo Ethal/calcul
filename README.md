@@ -1,6 +1,6 @@
 # calcul
 
-reviewing multiplication tables for child
+reviewing multiplication tables for children.
 
 ## Install ##
 
