@@ -1,4 +1,6 @@
 # calcul
+[![Build Status](https://travis-ci.org/Ethal/calcul.svg?branch=master)]
+
 
 reviewing multiplication tables for children.
 
