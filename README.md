@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/Ethal/calcul.svg?branch=master)](https://travis-ci.org/Ethal/calcul)
 
 
-reviewing multiplication tables for children.
+Reviewing multiplication tables for children.
 
 ## Install ##
 
