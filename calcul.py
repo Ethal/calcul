@@ -23,7 +23,7 @@ def Keyboardinput(txt):
 def startmessage(prenom):
     print ('Salut %s, c\'est partie' % (prenom))
 
-def Start(prenom):
+def start(prenom):
 
     nbbonnereponse = 0
     nboperation = 0
@@ -42,12 +42,12 @@ def Start(prenom):
         res = Keyboardinput(txt)
 
         if res == 'fin':
-            print ('--------------- Resultats Complet ---------------')
+            print('--------------- Resultats Complet ---------------')
             for equation in equations:
                 print (equation)
-            print ('')
-            print ('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
-            print ('-------------------------------------------------')
+            print('')
+            print('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
+            print('-------------------------------------------------')
             exit()
         else:
             if int(res) == produit:
@@ -58,7 +58,7 @@ def Start(prenom):
             reponse = ('%s (%ss)' %(reponse, (datetime.now()-timestart).seconds))
             equations.append('%s %s => %s' % (txt, res, reponse))
             nboperation = nboperation+1
-            print (reponse)
+            print(reponse)
 
 
 if __name__ == "__main__":
@@ -70,5 +70,5 @@ if __name__ == "__main__":
     firstname = results.firstname
 
     startmessage(firstname)
-    Start(firstname)
+    start(firstname)
 
