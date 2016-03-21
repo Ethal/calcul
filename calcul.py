@@ -8,10 +8,6 @@ import argparse
 
 
 def keyboardinput(txt):
-    try:
-        input = raw_input
-    except NameError:
-        pass
 
     kbpinputok = False
     while not kbpinputok:
