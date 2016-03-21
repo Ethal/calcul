@@ -6,22 +6,22 @@ from datetime import datetime
 import argparse
 
 
-def Keyboardinput(txt):
+def keyboardinput(txt):
 
-    kbpInputOk = False
-    while not kbpInputOk:
-        kbd = raw_input(txt)
+    kbpinputok = False
+    while not kbpinputok:
+        kbdinput = raw_input(txt)
         try:
-            if int(kbd) >= 0 and int(kbd) <= 100:
-                kbpInputOk = True
+            if int(kbdinput) >= 0 and int(kbdinput) <= 100:
+                kbpinputok = True
         except:
-            if kbd == 'fin':
-                kbpInputOk = True
-    return kbd
+            if kbdinput == 'fin':
+                kbpinputok = True
+    return kbdinput
 
 
 def startmessage(prenom):
-    print ('Salut %s, c\'est partie' % (prenom))
+    print('Salut %s, c\'est partie' % (prenom))
 
 def start(prenom):
 
@@ -39,12 +39,12 @@ def start(prenom):
         produit = facteur1*facteur2
         txt = str(facteur1) +' X ' + str(facteur2) + ' = '
         timestart = datetime.now()
-        res = Keyboardinput(txt)
+        res = keyboardinput(txt)
 
         if res == 'fin':
             print('--------------- Resultats Complet ---------------')
             for equation in equations:
-                print (equation)
+                print(equation)
             print('')
             print('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
             print('-------------------------------------------------')
