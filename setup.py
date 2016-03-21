@@ -10,5 +10,5 @@ setup(
       description='calcul',
       author='Ethal',
       author_email='developer@ethal-consulting.com',
-      url='https://github.com/Ethal/calcul
+      url='https://github.com/Ethal/calcul'
      )
