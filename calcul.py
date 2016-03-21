@@ -6,6 +6,11 @@ from datetime import datetime
 import argparse
 import gettext
 
+try:
+    input = raw_input
+except NameError:
+    pass
+
 
 def keyboardinput(txt):
 
@@ -16,8 +21,10 @@ def keyboardinput(txt):
             if int(kbdinput) >= 0 and int(kbdinput) <= 100:
                 kbpinputok = True
         except:
-            if kbdinput == "fin":
+            if kbdinput == 'fin':
                 kbpinputok = True
+            else:
+                pass
     return kbdinput
 
 
