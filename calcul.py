@@ -4,6 +4,7 @@
 import random
 from datetime import datetime
 import argparse
+import gettext
 
 
 def KeyboardInput(txt):
