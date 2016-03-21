@@ -20,7 +20,7 @@ def Keyboardinput(txt):
     return kbd
 
 
-def Startmessage(prenom):
+def startmessage(prenom):
     print ('Salut %s, c\'est partie' % (prenom))
 
 def Start(prenom):
@@ -69,6 +69,6 @@ if __name__ == "__main__":
     
     firstname = results.firstname
 
-    Startmessage(firstname)
+    startmessage(firstname)
     Start(firstname)
 
