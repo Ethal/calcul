@@ -10,7 +10,7 @@ def keyboardinput(txt):
 
     kbpinputok = False
     while not kbpinputok:
-        kbdinput = raw_input(txt)
+        kbdinput = input(txt)
         try:
             if int(kbdinput) >= 0 and int(kbdinput) <= 100:
                 kbpinputok = True
