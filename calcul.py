@@ -35,9 +35,9 @@ def Start(prenom):
 
     while True:
         
-        a=random.randint(0, 10)
-        b=random.randint(0, 10)
-        valid=a*b
+        a = random.randint(0, 10)
+        b = random.randint(0, 10)
+        valid = a*b
         txt = str(a) +' X ' + str(b) + ' = '
         ts = datetime.now()
         
@@ -48,7 +48,7 @@ def Start(prenom):
             for equation in equations:
                 print equation
             print ('')
-            print ('=> tu as reussis %s multiplications sur %s' % (str(nbbon),str(nb)))
+            print ('=> tu as reussis %s multiplications sur %s' % (str(nbbon), str(nb)))
             print ('-------------------------------------------------')
             exit()
         else:
@@ -56,18 +56,18 @@ def Start(prenom):
                 nbbon = nbbon+1
                 reponse = bonnereponse[random.randint(0, len(bonnereponse)-1)]
             else:
-                reponse = '%s, ça fait %i' % (mauvaisereponse[random.randint(0, len(mauvaisereponse)-1)],valid)
+                reponse = '%s, ça fait %i' % (mauvaisereponse[random.randint(0, len(mauvaisereponse)-1)], valid)
             
-            reponse = ('%s (%ss)' %(reponse,(datetime.now()-ts).seconds))
-            equations.append('%s %s => %s' % (txt,res,reponse))
-            nb=nb+1
+            reponse = ('%s (%ss)' %(reponse, (datetime.now()-ts).seconds))
+            equations.append('%s %s => %s' % (txt, res, reponse))
+            nb = nb+1
             print (reponse)
 
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description='Reviewing multiplication tables for children.',version='0.10')
-    parser.add_argument('-f', action='store', dest='firstname',help='firstname of the children',default='firstname')
+    parser = argparse.ArgumentParser(description='Reviewing multiplication tables for children.', version='0.10')
+    parser.add_argument('-f', action='store', dest='firstname', help='firstname of the children', default='firstname')
     results = parser.parse_args()
     
     prenom = results.firstname
