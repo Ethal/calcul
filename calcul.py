@@ -8,15 +8,15 @@ import argparse
 
 def KeyboardInput(txt):
 
-    kbpInputOk=False
+    kbpInputOk = False
     while not kbpInputOk:
         kbd = raw_input(txt)
         try:
             if int(kbd) >=0 and int(kbd) <= 100:
                 kbpInputOk=True
         except:
-            if kbd=='fin':
-                kbpInputOk=True
+            if kbd == 'fin':
+                kbpInputOk = True
     return kbd
 
 
@@ -52,7 +52,7 @@ def Start(prenom):
             print ('-------------------------------------------------')
             exit()
         else:
-            if int(res)==valid:
+            if int(res) == valid:
                 nbbon = nbbon+1
                 reponse = bonnereponse[random.randint(0, len(bonnereponse)-1)]
             else:
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     parser.add_argument('-f', action='store', dest='firstname',help='firstname of the children',default='firstname')
     results = parser.parse_args()
     
-    prenom=results.firstname
+    prenom = results.firstname
 
     StartMessage(prenom)
     Start(prenom)
