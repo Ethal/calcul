@@ -3,6 +3,8 @@
 
 import random
 from datetime import datetime
+import argparse
+
 
 def KeyboardInput(txt):
 
@@ -63,7 +65,13 @@ def Start(prenom):
 
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='Reviewing multiplication tables for children.',version='0.10')
+    parser.add_argument('-f', action='store', dest='firstname',help='firstname of the children',default='firstname')
+    results = parser.parse_args()
     
-    StartMessage('PRENOM')
-    Start('PRENOM')
+    prenom=results.firstname
+
+    StartMessage(prenom)
+    Start(prenom)
 
