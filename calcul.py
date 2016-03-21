@@ -34,13 +34,11 @@ def Start(prenom):
     equations = []
 
     while True:
-        
         facteur1 = random.randint(0, 10)
         facteur2 = random.randint(0, 10)
         produit = facteur1*facteur2
-        txt = str(faceur1) +' X ' + str(facteur2) + ' = '
+        txt = str(facteur1) +' X ' + str(facteur2) + ' = '
         timestart = datetime.now()
-        
         res = KeyboardInput(txt)
 
         if res == 'fin':
@@ -57,7 +55,6 @@ def Start(prenom):
                 reponse = bonnereponse[random.randint(0, len(bonnereponse)-1)]
             else:
                 reponse = '%s, ça fait %i' % (mauvaisereponse[random.randint(0, len(mauvaisereponse)-1)], produit)
-            
             reponse = ('%s (%ss)' %(reponse, (datetime.now()-timestart).seconds))
             equations.append('%s %s => %s' % (txt, res, reponse))
             nb = nb+1
