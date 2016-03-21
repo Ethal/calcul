@@ -6,7 +6,7 @@ from datetime import datetime
 import argparse
 
 
-def KeyboardInput(txt):
+def Keyboardinput(txt):
 
     kbpInputOk = False
     while not kbpInputOk:
@@ -20,13 +20,13 @@ def KeyboardInput(txt):
     return kbd
 
 
-def StartMessage(prenom):
+def Startmessage(prenom):
     print ('Salut %s, c\'est partie' % (prenom))
 
 def Start(prenom):
 
-    nbbon = 0
-    nb = 0
+    nbbonnereponse = 0
+    nboperation = 0
 
     bonnereponse = ['C\'est bien %s' % prenom, 'Bravo %s' % prenom, 'Bien %s, continue' % prenom, 'C\'est super %s' % prenom]
     mauvaisereponse = ['C\'est pas correct %s' % prenom, 'C\'est mauvais %s' % prenom]
@@ -39,25 +39,25 @@ def Start(prenom):
         produit = facteur1*facteur2
         txt = str(facteur1) +' X ' + str(facteur2) + ' = '
         timestart = datetime.now()
-        res = KeyboardInput(txt)
+        res = Keyboardinput(txt)
 
         if res == 'fin':
             print ('--------------- Resultats Complet ---------------')
             for equation in equations:
                 print equation
             print ('')
-            print ('=> tu as reussis %s multiplications sur %s' % (str(nbbon), str(nb)))
+            print ('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
             print ('-------------------------------------------------')
             exit()
         else:
             if int(res) == produit:
-                nbbon = nbbon+1
+                nbbonnereponse = nbbonnereponse+1
                 reponse = bonnereponse[random.randint(0, len(bonnereponse)-1)]
             else:
                 reponse = '%s, ça fait %i' % (mauvaisereponse[random.randint(0, len(mauvaisereponse)-1)], produit)
             reponse = ('%s (%ss)' %(reponse, (datetime.now()-timestart).seconds))
             equations.append('%s %s => %s' % (txt, res, reponse))
-            nb = nb+1
+            nboperation = nboperation+1
             print (reponse)
 
 
@@ -69,6 +69,6 @@ if __name__ == "__main__":
     
     firstname = results.firstname
 
-    StartMessage(firstname)
+    Startmessage(firstname)
     Start(firstname)
 
