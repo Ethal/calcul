@@ -10,7 +10,7 @@ python:
   - "nightly"
   - "pypy3"
 # command to install
-install: "pip install"
+install: pip install pylint
 # command to run tests
 script: nosetests
 sudo: false
