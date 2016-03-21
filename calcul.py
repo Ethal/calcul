@@ -15,7 +15,7 @@ def keyboardinput(txt):
             if int(kbdinput) >= 0 and int(kbdinput) <= 100:
                 kbpinputok = True
         except:
-            if kbdinput == 'fin':
+            if kbdinput == "fin":
                 kbpinputok = True
     return kbdinput
 
@@ -63,7 +63,8 @@ def start(prenom):
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description='Reviewing multiplication tables for children.', version='0.10')
+    parser = argparse.ArgumentParser(description='Reviewing multiplication tables for children.')
+    parser.add_argument('--version', action='version', version='%(prog)s 0.10')
     parser.add_argument('-f', action='store', dest='firstname', help='firstname of the children', default='firstname')
     results = parser.parse_args()
     
