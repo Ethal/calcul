@@ -35,11 +35,11 @@ def Start(prenom):
 
     while True:
         
-        a = random.randint(0, 10)
-        b = random.randint(0, 10)
-        valid = a*b
-        txt = str(a) +' X ' + str(b) + ' = '
-        ts = datetime.now()
+        facteur1 = random.randint(0, 10)
+        facteur2 = random.randint(0, 10)
+        produit = facteur1*facteur2
+        txt = str(faceur1) +' X ' + str(facteur2) + ' = '
+        timestart = datetime.now()
         
         res = KeyboardInput(txt)
 
@@ -52,13 +52,13 @@ def Start(prenom):
             print ('-------------------------------------------------')
             exit()
         else:
-            if int(res) == valid:
+            if int(res) == produit:
                 nbbon = nbbon+1
                 reponse = bonnereponse[random.randint(0, len(bonnereponse)-1)]
             else:
-                reponse = '%s, ça fait %i' % (mauvaisereponse[random.randint(0, len(mauvaisereponse)-1)], valid)
+                reponse = '%s, ça fait %i' % (mauvaisereponse[random.randint(0, len(mauvaisereponse)-1)], produit)
             
-            reponse = ('%s (%ss)' %(reponse, (datetime.now()-ts).seconds))
+            reponse = ('%s (%ss)' %(reponse, (datetime.now()-timestart).seconds))
             equations.append('%s %s => %s' % (txt, res, reponse))
             nb = nb+1
             print (reponse)
@@ -70,8 +70,8 @@ if __name__ == "__main__":
     parser.add_argument('-f', action='store', dest='firstname', help='firstname of the children', default='firstname')
     results = parser.parse_args()
     
-    prenom = results.firstname
+    firstname = results.firstname
 
-    StartMessage(prenom)
-    Start(prenom)
+    StartMessage(firstname)
+    Start(firstname)
 
