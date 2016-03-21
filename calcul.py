@@ -44,7 +44,7 @@ def Start(prenom):
         if res == 'fin':
             print ('--------------- Resultats Complet ---------------')
             for equation in equations:
-                print equation
+                print (equation)
             print ('')
             print ('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
             print ('-------------------------------------------------')
