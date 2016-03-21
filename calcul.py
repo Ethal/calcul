@@ -12,8 +12,8 @@ def KeyboardInput(txt):
     while not kbpInputOk:
         kbd = raw_input(txt)
         try:
-            if int(kbd) >=0 and int(kbd) <= 100:
-                kbpInputOk=True
+            if int(kbd) >= 0 and int(kbd) <= 100:
+                kbpInputOk = True
         except:
             if kbd == 'fin':
                 kbpInputOk = True
@@ -25,13 +25,13 @@ def StartMessage(prenom):
 
 def Start(prenom):
 
-    nbbon=0
-    nb=0
+    nbbon = 0
+    nb = 0
 
-    bonnereponse=['C\'est bien %s' % prenom,'Bravo %s' % prenom, 'Bien %s, continue' % prenom,'C\'est super']
-    mauvaisereponse=['C\'est pas correct %s' % prenom, 'C\'est mauvais %s' % prenom]
+    bonnereponse = ['C\'est bien %s' % prenom, 'Bravo %s' % prenom, 'Bien %s, continue' % prenom, 'C\'est super %s' % prenom]
+    mauvaisereponse = ['C\'est pas correct %s' % prenom, 'C\'est mauvais %s' % prenom]
 
-    equations=[]
+    equations = []
 
     while True:
         
@@ -41,9 +41,9 @@ def Start(prenom):
         txt = str(a) +' X ' + str(b) + ' = '
         ts = datetime.now()
         
-        res=KeyboardInput(txt)
+        res = KeyboardInput(txt)
 
-        if res=='fin':
+        if res == 'fin':
             print ('--------------- Resultats Complet ---------------')
             for equation in equations:
                 print equation
