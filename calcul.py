@@ -11,12 +11,6 @@ try:
 except NameError:
     pass
 
-try:
-    input = raw_input
-except NameError:
-    pass
-
-
 def keyboardinput(txt):
 
     kbpinputok = False
