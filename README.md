@@ -6,9 +6,10 @@ Reviewing multiplication tables for children.
 
 ## Install ##
 
-If not installed already, install [pip](https://pypi.python.org/pypi/pip) by running
+If not installed already, install [pip](https://pypi.python.org/pypi/pip) and [git](https://git-scm.com/) by running
 
 `sudo apt-get install python-pip`
+`sudo apt-get install git`
 
 After pip is installed, install the module by running
 
