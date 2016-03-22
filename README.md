@@ -8,9 +8,8 @@ Reviewing multiplication tables for children.
 
 If not installed already, install [pip](https://pypi.python.org/pypi/pip) and [git](https://git-scm.com/) by running
 
-`sudo apt-get install python-pip`
-`sudo apt-get install git`
+`sudo apt-get install python-pip git`
 
-After pip is installed, install the module by running
+After pip and git are installed, install the module by running
 
 `sudo pip install git+https://github.com/ethal/calcul.git`
