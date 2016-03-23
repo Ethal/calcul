@@ -10,10 +10,6 @@ try:
     input = raw_input
 except NameError:
     pass
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 
 def keyboardinput(txt):
 
