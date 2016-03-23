@@ -31,12 +31,12 @@ def startmessage(prenom):
     print('Salut %s, c\'est partie' % (prenom))
 
 
-def multiplication(table):
+def multiplication(tbl):
 
-    min = table
-    max = table
+    min = tbl
+    max = tbl
     
-    if table == -1:
+    if tbl == -1:
         min = 0
         max = 10
 
@@ -45,6 +45,16 @@ def multiplication(table):
     produit = facteur1*facteur2
 
     return facteur1,facteur2,produit
+
+def resultat(equations, nbbonnereponse, nboperation):
+    print('--------------- Resultats Complet ---------------')
+    for equation in equations:
+        print(equation)
+        print('')
+        print('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
+        print('-------------------------------------------------')
+
+
 
 def start(prenom, table):
 
@@ -58,19 +68,14 @@ def start(prenom, table):
     
     while True:
 
-        facteur1,facteur2,produit = multiplication(table)
+        facteur1, facteur2, produit = multiplication(table)
         
         txt = str(facteur1) +' X ' + str(facteur2) + ' = '
         timestart = datetime.now()
         res = keyboardinput(txt)
 
         if res == 'fin':
-            print('--------------- Resultats Complet ---------------')
-            for equation in equations:
-                print(equation)
-            print('')
-            print('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
-            print('-------------------------------------------------')
+            resultat(equations, nbbonnereponse, nboperation)
             exit()
         else:
             if int(res) == produit:
