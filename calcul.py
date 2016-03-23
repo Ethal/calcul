@@ -30,7 +30,7 @@ def keyboardinput(txt):
 def startmessage(prenom):
     print('Salut %s, c\'est partie' % (prenom))
 
-def start(prenom):
+def start(prenom,table):
 
     nbbonnereponse = 0
     nboperation = 0
@@ -39,9 +39,15 @@ def start(prenom):
     mauvaisereponse = ['C\'est pas correct %s' % prenom, 'C\'est mauvais %s' % prenom]
 
     equations = []
-
+    min = table
+    max = table
+    
+    if table == -1:
+        min = 0
+        max = 10
+    
     while True:
-        facteur1 = random.randint(0, 10)
+        facteur1 = random.randint(min, max)
         facteur2 = random.randint(0, 10)
         produit = facteur1*facteur2
         txt = str(facteur1) +' X ' + str(facteur2) + ' = '
@@ -73,10 +79,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Reviewing multiplication tables for children.')
     parser.add_argument('--version', action='version', version='%(prog)s 0.10')
     parser.add_argument('-f', action='store', dest='firstname', help='firstname of the children', default='firstname')
+    parser.add_argument('-t', action='store', dest='table', help='table to be revise', default=-1)
     results = parser.parse_args()
     
     firstname = results.firstname
-
+    table = int(results.table)
+    
     startmessage(firstname)
-    start(firstname)
+    start(firstname,table)
 
