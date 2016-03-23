@@ -30,7 +30,23 @@ def keyboardinput(txt):
 def startmessage(prenom):
     print('Salut %s, c\'est partie' % (prenom))
 
-def start(prenom,table):
+
+def multiplication(table):
+
+    min = table
+    max = table
+    
+    if table == -1:
+        min = 0
+        max = 10
+
+    facteur1 = random.randint(min, max)
+    facteur2 = random.randint(0, 10)
+    produit = facteur1*facteur2
+
+    return facteur1,facteur2,produit
+
+def start(prenom, table):
 
     nbbonnereponse = 0
     nboperation = 0
@@ -39,17 +55,11 @@ def start(prenom,table):
     mauvaisereponse = ['C\'est pas correct %s' % prenom, 'C\'est mauvais %s' % prenom]
 
     equations = []
-    min = table
-    max = table
-    
-    if table == -1:
-        min = 0
-        max = 10
     
     while True:
-        facteur1 = random.randint(min, max)
-        facteur2 = random.randint(0, 10)
-        produit = facteur1*facteur2
+
+        facteur1,facteur2,produit = multiplication(table)
+        
         txt = str(facteur1) +' X ' + str(facteur2) + ' = '
         timestart = datetime.now()
         res = keyboardinput(txt)
@@ -86,5 +96,5 @@ if __name__ == "__main__":
     table = results.table
     
     startmessage(firstname)
-    start(firstname,table)
+    start(firstname, table)
 
