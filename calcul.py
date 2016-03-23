@@ -4,7 +4,6 @@
 import random
 from datetime import datetime
 import argparse
-import gettext
 
 try:
     input = raw_input
@@ -50,11 +49,9 @@ def resultat(equations, nbbonnereponse, nboperation):
     print('--------------- Resultats Complet ---------------')
     for equation in equations:
         print(equation)
-        print('')
-        print('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
-        print('-------------------------------------------------')
-
-
+    print('')
+    print('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
+    print('-------------------------------------------------')
 
 def start(prenom, table):
 
