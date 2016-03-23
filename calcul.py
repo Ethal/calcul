@@ -4,12 +4,12 @@
 import random
 from datetime import datetime
 import argparse
-import gettext
 
 try:
     input = raw_input
 except NameError:
     pass
+
 
 def keyboardinput(txt):
 
