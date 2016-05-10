@@ -50,7 +50,7 @@ def resultat(equations, nbbonnereponse, nboperation):
     for equation in equations:
         print(equation)
     print('')
-    print('=> tu as reussis %s multiplications sur %s' % (str(nbbonnereponse), str(nboperation)))
+    print('=> tu as reussis %s multiplications sur %s (%s/20)' % (str(nbbonnereponse), str(nboperation),str(nbbonnereponse*20/nboperation)))
     print('-------------------------------------------------')
 
 def start(prenom, table):
