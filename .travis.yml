@@ -10,7 +10,6 @@ python:
 # command to install
 install: 
   - pip install pylint coverage
-  - pip install -e
 # command to run tests
 script: 
   - nosetests -s -q
