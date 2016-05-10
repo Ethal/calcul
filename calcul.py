@@ -43,14 +43,14 @@ def multiplication(tbl):
     facteur2 = random.randint(0, 10)
     produit = facteur1*facteur2
 
-    return facteur1,facteur2,produit
+    return facteur1, facteur2, produit
 
 def resultat(equations, nbbonnereponse, nboperation):
     print('--------------- Resultats Complet ---------------')
     for equation in equations:
         print(equation)
     print('')
-    print('=> tu as reussis %s multiplications sur %s (%s/20)' % (str(nbbonnereponse), str(nboperation),str(nbbonnereponse*20/nboperation)))
+    print('=> tu as reussis %s multiplications sur %s (%s/20)' % (str(nbbonnereponse), str(nboperation), str(nbbonnereponse*20/nboperation)))
     print('-------------------------------------------------')
 
 def start(prenom, table):
@@ -88,15 +88,15 @@ def start(prenom, table):
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description='Reviewing multiplication tables for children.')
+    parser = argparse.ArgumentParser(description='Revision des tables de multiplications.')
     parser.add_argument('--version', action='version', version='%(prog)s 0.10')
-    parser.add_argument('-f', action='store', dest='firstname', help='firstname of the children', default='')
-    parser.add_argument('-t', action='store', dest='table', type=int, help='table to be revise', default=-1)
+    parser.add_argument('-f', action='store', dest='childname', help='prenom', default='')
+    parser.add_argument('-t', action='store', dest='table', type=int, help='table de multiplication', default=-1)
     results = parser.parse_args()
     
-    firstname = results.firstname
+    childname = results.childname
     table = results.table
     
-    startmessage(firstname)
-    start(firstname, table)
+    startmessage(childname)
+    start(childname, table)
 
