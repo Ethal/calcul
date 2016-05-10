@@ -8,9 +8,12 @@ python:
   - "nightly"
   - "pypy3"
 # command to install
-install: pip install pylint
+install: 
+  - pip install pylint coverage
+  - pip install -e
 # command to run tests
-script: nosetests
+script: 
+  - nosetests -s -q
 sudo: false
 matrix:
   fast_finish: true
