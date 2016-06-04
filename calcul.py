@@ -70,7 +70,6 @@ def start(prenom, tables):
     while True:
 
         table = tables[random.randint(0, len(tables))-1]
-        
         facteur1, facteur2, produit = multiplication(table)
         
         txt = str(facteur1) +' X ' + str(facteur2) + ' = '
