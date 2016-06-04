@@ -99,10 +99,10 @@ def start(prenom, table):
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description=_('Revision des tables de multiplications.'))
+    parser = argparse.ArgumentParser(description=_('Reviewing multiplication tables for children.'))
     parser.add_argument('--version', action='version', version='%(prog)s 0.10')
     parser.add_argument('-f', action='store', dest='childname', help=_('prenom'), default='')
-    parser.add_argument('-t', action='store', dest='table', type=int, help=_('table de multiplication'), default=-1)
+    parser.add_argument('-t', action='store', dest='table', type=int, help=_('multiplication table'), default=-1)
     results = parser.parse_args()
     
     childname = results.childname
