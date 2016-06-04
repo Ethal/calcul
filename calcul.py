@@ -101,7 +101,7 @@ if __name__ == "__main__":
     
     childname = args.childname
     if args.tables == -1:
-        tables = [0,1,2,3,4,5,6,7,8,9,10]
+        tables = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     else:
         tables = args.tables
     
